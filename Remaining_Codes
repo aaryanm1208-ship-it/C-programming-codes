@@ -1,0 +1,471 @@
+31
+
+// TABLE OF THE NUMBERS 
+#include<stdio.h> 
+int main() 
+{ 
+int n; 
+printf("KYA DEKH RAHE HO\n,DUM HAI TO VALUE 
+ENTER KARKE DIKHAO\n"); 
+scanf("%d",&n); 
+for(int i=1 ; i<=20 ; i++){ 
+printf("%d\n",i*n); 
+} 
+return 0; 
+} 
+32
+
+// USING BREAK TO END THE LOOP 
+#include <stdio.h> 
+int main() { 
+for(int i=1 ; i<=15 ; i++){ 
+if(i==3){ 
+break;} 
+printf("%d\n",i); 
+} 
+printf("end\n"); 
+return 0; 
+} 
+33
+
+// RO KEEP TAKING THE NUMBERS FORM USER UNTIL 
+ITS AN ODD NUMBER 
+#include <stdio.h> 
+int main() { 
+int n; 
+do{ 
+printf("enter the number :\n"); 
+scanf("%d",&n); 
+printf("%d\n",n); 
+if(n % 2 != 0){ 
+break; 
+} 
+}while(1); 
+printf("thankyou"); 
+return 0; 
+} 
+34
+
+// RO KEEP TAKING THE NUMBERS FORM USER UNTIL 
+ITS AN ODD NUMBER 
+#include <stdio.h> 
+int main() { 
+int n; 
+do{ 
+printf("enter the number :\n"); 
+scanf("%d",&n); 
+printf("%d\n",n); 
+if(n % 2 != 0){ 
+break; 
+} 
+}while(1); 
+printf("thankyou"); 
+return 0; 
+} 
+35
+
+//TO SKIP THE NUMBER YOU DONT WANT 
+#include<stdio.h> 
+int main() 
+{ 
+for(int n=1 ; n<=18 ; n++){ 
+if(n==7){ 
+continue; 
+} 
+printf("%d\n",n); 
+} 
+printf("THANK YOU"); 
+return 0; 
+} 
+36
+
+//TO FIND THE FACTORIAL OF A NUMBER  
+#include<stdio.h> 
+int main() 
+{ 
+int n; 
+printf("enter the value"); 
+scanf("%d",&n); 
+int fact=1; 
+for(int i=1 ; i<=n ; i++){ 
+fact=fact*i; 
+} 
+printf("the factorial = %d\n",fact); 
+printf("THANK YOU"); 
+return 0; 
+} 
+37
+
+#include <stdio.h> 
+int main() {  
+int sum; 
+for(int i=1 ; i<=10 ; i++){ 
+sum+=i; 
+} 
+printf("THE SUM OF THE NUMBERS IS=%d\n",sum); 
+printf("thankyou"); 
+return 0; 
+38
+
+//print hello and good using function 
+#include<stdio.h> 
+void printhello(); 
+void printgood(); 
+int main(){ 
+printhello(); 
+printgood(); 
+return 0; 
+} 
+void printhello(){ 
+printf("hello\n"); 
+} 
+void printgood(){ 
+printf("good\n"); 
+} 
+39
+
+#include<stdio.h> 
+int sum(int a , int b); 
+int main(){ 
+int a,b; 
+printf("enter value\n"); 
+scanf("%d",&a); 
+printf("enter value\n"); 
+scanf("%d",&b); 
+int s=sum(a,b); 
+printf("sum is%d",s); 
+return 0; 
+} 
+int sum(int a , int b){ 
+return a+b; 
+} 
+40
+
+#include<stdio.h> 
+void hi(); 
+void bye(); 
+int main() 
+{ 
+printf("enter i if you want me & g if you dont"); 
+char ch; 
+scanf("%d",&ch); 
+if(ch== 'i'){ 
+hi(); 
+} 
+else{ 
+bye(); 
+} 
+} 
+void hi(){ 
+printf("hi"); 
+} 
+void bye(){ 
+printf("bye"); 
+} 
+41
+
+#include<stdio.h> 
+int sum(int a , int b); 
+int main(){ 
+int a,b; 
+printf("enter the value of a"); 
+scanf("%d",&a); 
+printf("enter the value of b"); 
+scanf("%d",&b); 
+int s=sum(a,b); 
+printf("sum of the numbers are %d",s); 
+return 0; 
+} 
+int sum(int a , int b){ 
+return a+b; 
+} 
+42
+
+#include<stdio.h> 
+int sum(int a , int b); 
+int main(){ 
+int a,b; 
+printf("enter the value of a"); 
+scanf("%d",&a); 
+printf("enter the value of b"); 
+scanf("%d",&b); 
+int s=sum(a,b); 
+printf("sum of the numbers are %d",s); 
+return 0; 
+} 
+int sum(int a , int b){ 
+return a+b; 
+} 
+42
+
+#include<stdio.h> 
+int sum(int n); 
+int main(){ 
+printf("sum is %d\n",sum(17)); 
+return 0; 
+} 
+int sum(int n){ 
+if(n==2){ 
+return 1; 
+} 
+int sumNm1=sum(n-1); 
+int sumN= sumNm1 + n; 
+return sumN; 
+} 
+43
+
+#include<stdio.h> 
+int main(){ 
+int age=22; 
+int *ptr=&age; 
+int **pptr=&ptr; 
+printf("%u\n",**pptr); 
+return 0; 
+} 
+44
+
+#include <stdio.h> 
+void square(int n); 
+int main(){ 
+int number=4; 
+square(number); 
+printf("square of number %d\n",number); 
+return 0; 
+} 
+void square(int n){ 
+n =n * n; 
+printf("%d\n",n); 
+} 
+45
+
+//pointer to function call 
+#include <stdio.h> 
+void square(int n); 
+void _square(int *n); 
+int main(){ 
+int number=4; 
+square(number); 
+printf("square of number %d\n",number); 
+_square(&number); 
+printf("soul %d",number); 
+return 0; 
+} 
+void square(int n){ 
+n =n * n; 
+printf("%d\n",n); 
+} 
+void _square(int *n){ 
+*n =(*n) * (*n); 
+printf("%d\n",*n); 
+} 
+46
+
+//swap 2 numbers a and b 
+#include<stdio.h> 
+void num(int a , int b); 
+void _num(int *a , int *b); 
+int main(){ 
+int x=2 ,  y=4; 
+_num(&x , &y); 
+printf("%d\n%d\n",x,y); 
+return 0; 
+} 
+void _num(int *a , int *b){ 
+int t=*a; 
+*a=*b; 
+*b=t; 
+printf("*a=%d\n , *b=%d\n", *a,*b); 
+} 
+void num(int a , int b){ 
+int t=a; 
+a=b; 
+b=t; 
+printf("a=%d\n , b=%d\n", a,b); 
+} 
+47
+
+//ARRAYS CONCEPT  
+#include<stdio.h> 
+int main(){ 
+int marks[3]; 
+printf("chemistry mein muze mile hai\n"); 
+scanf("%d",&marks[0]); 
+printf("maths mein muze mile hai\n"); 
+scanf("%d",&marks[1]); 
+printf("IT mein muze mile hai\n"); 
+scanf("%d",&marks[2]); 
+printf("chemistry=%d\n,maths=%d\n,IT=%d\n",marks[
+0],marks[1],marks[2]); 
+return 0; 
+} 
+48
+
+//ARRAYS CONCEPT : write a program to enter a 
+price of 3 items and print their final cost with gst 
+#include<stdio.h> 
+int main(){ 
+int price[2]; 
+printf("enter the values\n"); 
+scanf("%d",&price[0]); 
+scanf("%d",&price[1]); 
+printf("price 1 =%d\n",price[0]+(0.18*price[0])); 
+printf("price 2 =%d\n",price[1]+(0.18*price[1])); 
+return 0; 
+} 
+49
+
+//ARRAYS CONCEPT : Initialization of an array 
+#include<stdio.h> 
+int main(){ 
+int price[2]={9,7}; 
+printf("enter the values\n"); 
+//scanf("%d",&price[0]); 
+//scanf("%d",&price[1]); 
+printf("price 1 =%d\n",price[0]+(0.18*price[0])); 
+printf("price 2 =%d\n",price[1]+(0.18*price[1])); 
+return 0; 
+} 
+50
+
+//ARRAYS USING POINTER ARITHMETIC 
+#include<stdio.h> 
+int main(){ 
+int a=2; 
+int *ptr=&a; 
+printf("value of ptr%u\n",ptr); 
+ptr++; 
+printf("value of ptr%u\n",ptr); 
+return 0; 
+} 
+51
+
+//pointer arithmetic using both increment and 
+decrement  
+#include<stdio.h> 
+int main(){ 
+int a=2; 
+int *ptr=&a; 
+printf("value of ptr is%d\n",ptr); 
+ptr++; 
+printf("value of ptr is%d\n",ptr); 
+ptr--; 
+printf("value of ptr is%d\n",ptr); 
+return 0; 
+} 
+52
+
+#include<stdio.h> 
+int main(){ 
+int a=1; 
+int _a=1; 
+int *ptr=&a; 
+int *_ptr=&_a; 
+printf("differnce = \t%u\n",ptr-_ptr); 
+printf("comparison = \t%u\n",ptr == _ptr); 
+return 0; 
+} 
+53
+
+#include<stdio.h> 
+int main(){ 
+int a=1; 
+int _a=1; 
+int *ptr=&a; 
+int *_ptr=&_a; 
+printf("differnce = \t%u\n",ptr-_ptr); 
+_ptr=&a; 
+printf("comparison = \t%u\n",ptr == _ptr); 
+return 0; 
+} 
+54
+
+//ARRAYS CODE 2D 
+#include<stdio.h> 
+int main(){ 
+int marks[2][3]; 
+marks[0][0]=90; 
+marks[0][1]=99; 
+marks[0][2]=98; 
+marks[1][0]=90; 
+marks[1][1]=99; 
+marks[1][2]=98; 
+printf("chemistry marks for 1 are\t 
+%d\n\n",marks[0][0]); 
+printf("bio marks for 1 are\t %d\n",marks[0][1]); 
+printf("CS marks for 1 are\t %d\n",marks[0][2]); 
+return 0; 
+} 
+55
+
+//strings code b,a = o/p= aaryan 
+//* then a,b =o/p= mudvikar 
+#include<stdio.h> 
+#include<string.h> 
+int main(){ 
+char a[]="aaryan"; 
+char b[]="mudvikar"; 
+strcpy(b,a); 
+puts(a); 
+return 0; 
+} 
+56
+
+//strings code using strcat 
+#include<stdio.h> 
+#include<string.h> 
+int main(){ 
+char a[]="aaryan\n"; 
+char b[]="mudvikar"; 
+strcat(a,b); 
+puts(a); 
+return 0; 
+} 
+57
+
+// comparison between char using strcmp 
+#include<stdio.h> 
+#include<string.h> 
+int main(){ 
+char a[]="aaryan"; 
+char b[]="mudvikar"; 
+printf("%d\n",strcmp(a,b)); 
+return 0; 
+} 
+58
+
+//DYNAMIC MEMORY ALLOCATION = malloc() 
+#include<stdio.h> 
+int main(){ 
+printf("%d\n",sizeof(int)); 
+return 0; 
+} 
+59
+
+//DYNAMIC MEMORY ALLOCATION = malloc() 
+#include<stdio.h> 
+int main(){ 
+printf("%d\n",5*(sizeof(int))); 
+printf("%f\n",sizeof(float)); 
+printf("%c\n",(sizeof(char))); 
+return 0; 
+} 
+60
+
+//structures code  
+#include<stdio.h> 
+#include<string.h> 
+struct student { 
+int clas; 
+float cgpa; 
+char name[]; 
+}; 
+int main(){ 
+struct student s1; 
+s1.clas=11; 
+s1.cgpa=9.99; 
+strcat(s1.name,"AARYAN"); 
+printf("my name is:%s\n","AARYAN"); 
+printf("%d\n",s1.clas); 
+printf("%f\n",s1.cgpa); 
+return 0; 
+}
